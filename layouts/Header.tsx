@@ -5,18 +5,19 @@ import style from "../styles/scss/header.module.scss"
 const Header = () => {
   return (
     <header className={`shadow-lg ${style.header}`}>
-    <div className="container">
+    <div className={`container ${style.container__flex}`}>
         <p className={`${style.logo}`}>
             <Link href="/">
-            TheFiyin
+            <><span className="text-blue-500">The</span><span className="text-slate-400">Fiyin</span></>
             </Link>
         </p>
-        <div className={style.hamburger}>
+        <div className={`${style.hamburger}`}>
             <p className={style.hamburger__text}>MENU</p>
             <div className={`${style.hamburger__btn}`}>
-                <span className={`${style.line1}`}></span>
-                <span className={`${style.line2}`}></span>
-                <span className={`${style.lin3}`}></span>
+            
+                <span className={`bg-slate-400 ${style.line1} ${style.line}`}></span>
+                <span className={`bg-blue-500 ${style.line2} ${style.line}`}></span>
+                <span className={`bg-slate-400 ${style.lin3} ${style.line}`}></span>
             </div>
       </div>
     </div>
