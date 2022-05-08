@@ -1,14 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Lekton&family=Pacifico&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Bitter', 'Lekton', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    
 }
+
+
 
 a {
   color: inherit;
@@ -17,4 +24,36 @@ a {
 
 * {
   box-sizing: border-box;
+  transition: 0.3s ease-in;
+  font-family: 'Lekton', sans-serif;
+  margin: 0;
+  padding:0;
+}
+
+@layer base{
+  .content{
+    @apply lg:text-left tracking-wide font-bold text-slate-800 dark:text-slate-400 text-lg;
+  }
+  .header-1{
+    @apply text-3xl lg:text-5xl font-black my-6 text-blue-900 dark:text-blue-600;
+  }
+  .header-2{
+    @apply tracking-wide text-xl lg:text-3xl font-extrabold my-3 text-blue-600 dark:text-blue-400;
+  }
+  body{
+    @apply min-h-screen bg-slate-200 dark:bg-slate-800;
+  }
+}
+
+@layer utilities{
+  .section{
+    /* @apply ; */
+  }
+  .container{
+    @apply px-2 md:px-3 lg:px-24 xl:px-40 w-full;
+  }
+  .container--vertical--spacing{
+    @apply my-12;
+  }
+ 
 }
