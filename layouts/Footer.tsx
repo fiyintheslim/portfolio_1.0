@@ -22,7 +22,7 @@ const Footer = () => {
         </a>
       </div>
       <div className={`${style.credit__section}`}>
-        <p className={`text-emerald-100 dark:text-emerald-400 ${style.credit}`}>Built by Oyekunle Fiyinfoluwa. Inspired by <a className="text-slate-900 dark:text-cyan-300" target="_blank" href="https://www.ifedili.com/">Ifedili Onyegbu</a> and <a className="text-slate-900 dark:text-cyan-300" target="_blank" href="https://brittanychiang.com/">Brittany Chiang</a>.</p>
+        <p className={`text-emerald-100 dark:text-emerald-400 ${style.credit}`}>Built by Oyekunle Fiyinfoluwa. Inspired by <a className="text-slate-900 dark:text-cyan-300" rel="noreferrer" target="_blank" href="https://www.ifedili.com/">Ifedili Onyegbu</a> and <a className="text-slate-900 dark:text-cyan-300" rel="noreferrer" target="_blank" href="https://brittanychiang.com/">Brittany Chiang</a>.</p>
       </div>
     </footer>
   )
