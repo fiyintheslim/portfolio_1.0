@@ -30,20 +30,30 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100px;
+    width: 10rem;
     overflow:hidden;
     &:hover p{
         top:0;
     }
+    
 }
-
-.hamburger__text{
+.hamburger__menu{
     display: none;
-    position: relative;
-    top: 3rem;
     @media only screen and (min-width:768px){
         display:block;
     }
+}
+
+.hamburger__text{
+    
+    position: relative;
+    top: 3rem;
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    font-family: 'Roboto', sans-serif;
+    -webkit-text-stroke:2px $primary_component_color;
+    
 }
 
 .hamburger__btn{
@@ -64,8 +74,9 @@
     border-radius: 10%;
 }
 
-.line1{
 
+.line1{
+    
 }
 .line2{
 
@@ -74,4 +85,52 @@
 
 }
 
+.menu{
+    position: fixed;
+    top: 0;
+    right:0;
+    height: 100vh;
+    width:100vw;
+    backdrop-filter:blur(5px) opacity(100%);
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    transform: translateX(100vw);
+}
 
+.menu__content{
+    height: 100%;
+    width: 80%;
+    box-shadow: -2px 0px 10px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.link{
+    margin-right: 3rem;
+    cursor: pointer;
+    @media only screen and (min-width:1024px){
+        font-size: 4rem;
+    }
+    
+}
+
+.close{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+
+    @media only screen and (min-width: 1024px){
+        width: 5rem;
+        height: 5rem;
+    }
+    &:hover{
+        transform: rotate(90deg);
+    }
+    
+}
