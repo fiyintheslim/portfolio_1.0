@@ -3,16 +3,16 @@ import style from "../styles/scss/contact.module.scss"
 
 const Contact = () => {
   return (
-    <main>
-        <div className={`container`}>
+    <main className={`${style.main}`}>
+        <div className={`container-custom ${style.container}`}>
             <h3 className={`header-1`}>Get In Touch</h3>
-            <p className={`content`}>My inbox is always open to people and new opportunities. Leave me a message and I will respond A$AP.</p>
+            <p className={`content`}>My inbox is always open to people and new opportunities. Leave me a message, I will try my best to respond A$AP.</p>
             <div className={`${style.socials__container}`}>
-                <a className={`btn`} href="mailto:fiyinoyekunle@gmail.com" rel="noreferrer" target="_blank">Send an Email</a>
-                <div>
-                    <a className={` ${style.socials}`} rel="noreferrer"  target="_blank" href="">Github</a>
-                    <a className={` ${style.socials}`} rel="noreferrer"  target="_blank" href="">Twitter</a>
-                    <a className={` ${style.socials}`} rel="noreferrer"  target="_blank" href="">LinkedIn</a>
+                <a className={`btn ${style.email__btn}`} href="mailto:fiyinoyekunle@gmail.com" rel="noreferrer" target="_blank">Send an Email</a>
+                <div className={`${style.socials}`}>
+                    <a className={`text-transparent ${style.social}`} rel="noreferrer"  target="_blank" href="">Github</a>
+                    <a className={`text-transparent ${style.social}`} rel="noreferrer"  target="_blank" href="">Twitter</a>
+                    <a className={`text-transparent ${style.social}`} rel="noreferrer"  target="_blank" href="">LinkedIn</a>
                 </div>
             </div>
             

@@ -20,14 +20,14 @@ const Header = () => {
   return (
     <>
     <header className={`shadow-lg ${style.header}`}>
-    <div className={`container ${style.container__flex}`}>
+    <div className={`container-custom ${style.container__flex}`}>
       <Link href="/">
           <p className={`${style.logo}`}>
               <span className="text-blue-500">The</span><span className="text-slate-400">Fiyin</span>
           </p>
         </Link>
         <div className={`${style.hamburger}`}>
-            <p className={`text-slate-300 ${style.hamburger__text} ${style.hamburger__menu}`}>MENU</p>
+            <p className={`text-transparent ${style.hamburger__text} ${style.hamburger__menu}`}>MENU</p>
             <div onClick={handleMenu} className={`${style.hamburger__btn}`}>
                 <span className={`bg-slate-400 ${style.line1} ${style.line} one`}></span>
                 <span className={`bg-blue-500 ${style.line2} ${style.line} two`}></span>

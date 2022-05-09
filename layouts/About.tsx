@@ -4,7 +4,7 @@ import styles from "../styles/scss/about.module.scss"
 const About = () => {
   return (
       <section>
-        <div className={`container container--vertical--spacing ${styles.about}`}>
+        <div className={`container-custom container--vertical--spacing ${styles.about}`}>
           <h3 className={`header-1 ${styles.primary_text}`}>
             <span>Hi, I'm </span>
             <span>Fiyinfoluwa Oyekunle</span>
@@ -13,8 +13,8 @@ const About = () => {
             I build sofware for the web.
           </h4>
           <p className={`content`}>
-            I'm a software engineer with 2+ years of experience. I build performant web applications, to give excellent experiences to the end user.
-            I am currently focusing on accessibility, performance and creating immersive aesthetic experiences through design and animations.  
+          I have 2+ years of experience as a software engineer. I create high-performance online applications that provide amazing user experiences.
+          I am currently concentrating on accessibility, performance, and the creation of immersive aesthetic experiences through design and animations. 
           </p>
         </div>
       </section>

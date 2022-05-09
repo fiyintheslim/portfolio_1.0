@@ -1,0 +1,48 @@
+@import "./variables";
+.main{
+    display: flex;
+    align-items: center;
+}
+.container{
+    margin-top: 4rem;
+    height: 100%;
+}
+
+.socials__container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    @media only screen and (min-width: 1024px){
+        flex-direction: row;
+        align-items: center;
+        margin-left: unset
+    }
+}
+
+.socials{
+    display: grid;
+    grid-template: 1fr 1fr 1fr / auto;
+    align-content: center;
+    justify-content: space-evenly;
+    @media only screen and (min-width: 1024px){
+        grid-template: auto / 1fr 1fr 1fr ;
+    }
+    
+}
+
+.social{
+    font-weight: 900;
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    -webkit-text-stroke:2px $primary_component_color;
+}
+
+.email__btn{
+
+    &:hover{
+
+    }
+}

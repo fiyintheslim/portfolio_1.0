@@ -53,7 +53,7 @@ main{
   .section{
     /* @apply ; */
   }
-  .container{
+  .container-custom{
     @apply px-2 md:px-3 lg:px-24 xl:px-40 w-full;
   }
   .container--vertical--spacing{
@@ -64,7 +64,7 @@ main{
 
 @layer components{
   .btn{
-    @apply outline-0 border-blue-500 text-blue-500 border py-1 px-2 rounded;
+    @apply outline-0 border-blue-500 text-blue-500 border py-3 px-5 rounded hover:bg-blue-200 hover:text-blue-700;
   }
 }
 
