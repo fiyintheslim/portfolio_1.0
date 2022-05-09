@@ -13,8 +13,8 @@ const About = () => {
             I build sofware for the web.
           </h4>
           <p className={`content`}>
-            I'm a software engineer with 2+ years of experience. I focus on building performant applications, to give people excellent experiences.
-            I am currently learning how to create immersive aesthetic experiences through design and animations.  
+            I'm a software engineer with 2+ years of experience. I build performant web applications, to give excellent experiences to the end user.
+            I am currently focusing on accessibility, performance and creating immersive aesthetic experiences through design and animations.  
           </p>
         </div>
       </section>
