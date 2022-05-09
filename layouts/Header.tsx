@@ -21,11 +21,11 @@ const Header = () => {
     <>
     <header className={`shadow-lg ${style.header}`}>
     <div className={`container ${style.container__flex}`}>
-        <p className={`${style.logo}`}>
-            <Link href="/">
-            <><span className="text-blue-500">The</span><span className="text-slate-400">Fiyin</span></>
-            </Link>
-        </p>
+      <Link href="/">
+          <p className={`${style.logo}`}>
+              <span className="text-blue-500">The</span><span className="text-slate-400">Fiyin</span>
+          </p>
+        </Link>
         <div className={`${style.hamburger}`}>
             <p className={`text-slate-300 ${style.hamburger__text} ${style.hamburger__menu}`}>MENU</p>
             <div onClick={handleMenu} className={`${style.hamburger__btn}`}>

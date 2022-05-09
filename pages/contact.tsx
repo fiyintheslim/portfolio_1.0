@@ -10,9 +10,9 @@ const Contact = () => {
             <div className={`${style.socials__container}`}>
                 <a className={`btn`} href="mailto:fiyinoyekunle@gmail.com" target="_blank">Send an Email</a>
                 <div>
-                    <a className={` ${style.socials}`} target="_blank" href="">Github</a>
-                    <a className={` ${style.socials}`} target="_blank" href="">Twitter</a>
-                    <a className={` ${style.socials}`} target="_blank" href="">LinkedIn</a>
+                    <a className={` ${style.socials}`} rel="noreferrer"  target="_blank" href="">Github</a>
+                    <a className={` ${style.socials}`} rel="noreferrer"  target="_blank" href="">Twitter</a>
+                    <a className={` ${style.socials}`} rel="noreferrer"  target="_blank" href="">LinkedIn</a>
                 </div>
             </div>
             
