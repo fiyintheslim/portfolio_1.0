@@ -36,6 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   <>
     <Head>
       <link rel="icon" href="favicon.png" />
+      <title>Oyekunle Fiyinfoluwa | Software developer</title>
     </Head>
     <Header />
     <Component {...pageProps} />

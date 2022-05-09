@@ -30,12 +30,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 10rem;
+    
     overflow:hidden;
     &:hover p{
         top:0;
     }
-    
+    @media only screen and (min-width:768px){
+        width: 10rem;
+    }
 }
 .hamburger__menu{
     display: none;
