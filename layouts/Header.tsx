@@ -39,7 +39,8 @@ const Header = () => {
     
   </header>
   <div ref={menuEle} className={`${style.menu}`}>
-    <div className={`bg-slate-300 dark:bg-slate-900 ${style.menu__content}`}>
+    <div className={`bg-slate-300 dark:bg-neutral-900 ${style.menu__content}`}>
+      <a className={`btn ${style.resume}`} href="https://docs.google.com/document/d/1ilIhlrhvWkfaWppdEnsPZiLgO6KkGKkEA2d8UNoT4u8/edit?usp=sharing" rel="noreferrer" target="_blank">My Resume</a>
       <svg onClick={handleMenu} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className={`fill-slate-700 dark:fill-slate-300 ${style.close}`} viewBox="0 0 16 16">
         <path fillRule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
         <path fillRule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>

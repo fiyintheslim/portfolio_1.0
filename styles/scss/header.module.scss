@@ -109,6 +109,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    position: relative;
 }
 
 .link{
@@ -118,6 +119,12 @@
         font-size: 4rem;
     }
     
+}
+
+.resume{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
 }
 
 .close{

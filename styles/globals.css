@@ -36,16 +36,16 @@ main{
 
 @layer base{
   .content{
-    @apply lg:text-left tracking-wide font-bold text-slate-800 dark:text-slate-400 text-lg;
+    @apply lg:text-left tracking-wide font-bold text-slate-800 dark:text-slate-400 text-xl lg:text-3xl;
   }
   .header-1{
-    @apply text-3xl lg:text-5xl font-black my-6 text-blue-900 dark:text-blue-600;
+    @apply text-5xl lg:text-7xl font-black my-6 text-blue-900 dark:text-blue-600;
   }
   .header-2{
-    @apply tracking-wide text-xl lg:text-3xl font-extrabold my-3 text-blue-600 dark:text-blue-400;
+    @apply tracking-wide text-3xl lg:text-5xl font-extrabold my-3 text-blue-600 dark:text-blue-400;
   }
   body{
-    @apply min-h-screen bg-slate-200 dark:bg-slate-800;
+    @apply min-h-screen bg-slate-200 dark:bg-neutral-900;
   }
 }
 
@@ -64,7 +64,7 @@ main{
 
 @layer components{
   .btn{
-    @apply outline-0 border-blue-500 text-blue-500 border py-3 px-5 rounded hover:bg-blue-200 hover:text-blue-700;
+    @apply outline-0 font-bold border-blue-500 text-blue-500 border py-3 px-5 rounded hover:bg-blue-200 hover:text-blue-700;
   }
 }
 
