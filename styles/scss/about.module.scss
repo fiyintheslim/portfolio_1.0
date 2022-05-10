@@ -13,3 +13,34 @@ flex-direction: column;
 .paragraph{
     margin-bottom: 2.5rem;
 }
+
+.technologies{
+    display: grid;
+    gap: 1rem;
+    grid-template: auto / 160px 160px;
+    @media only screen and (min-width: 1024px){
+        grid-template: auto / 1fr 1fr 1fr;
+    }
+    @media only screen and (min-width: 1536px){
+        grid-template: auto / 1fr 1fr 1fr 1fr;
+    }
+}
+.logo{
+    position: relative;
+    height: 75px;
+    width: 80px;
+}
+.card{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-around;
+ border-radius: 0.25rem;
+ padding: 1rem 2rem;
+ @media only screen and (min-width: 1024px){
+    flex-direction: row;
+ }
+}
+.tech{
+    font-family: "Roboto", sans-serif;
+}

@@ -7,6 +7,7 @@
     width: 100%;
     backdrop-filter: blur(16px) opacity(100%);
     padding: 1rem 0;
+    z-index: 100;
 }
 
 .header--content{
@@ -99,6 +100,7 @@
     justify-content: flex-end;
     opacity: 0;
     transform: translateX(100vw);
+    z-index: 150;
 }
 
 .menu__content{

@@ -2,14 +2,75 @@ import React from 'react'
 import style from "../styles/scss/about.module.scss"
 import TechCard from "../components/TechCard"
 
+
 const technologies=[
   {
     src:"/logos/css.svg",
     tech:"CSS"
   },
   {
+    src:"/logos/html.svg",
+    tech:"HTML"
+  },
+  {
+    src:"/logos/javascript.svg",
+    tech:"Javascript"
+  },
+  {
+    src:"/logos/php-1.svg",
+    tech:"PHP"
+  },
+  {
+    src:"/logos/sass-1.svg",
+    tech:"SASS"
+  },
+  {
+    src:"/logos/react-2.svg",
+    tech:"ReactJS"
+  },
+  {
+    src:"/logos/next-js.svg",
+    tech:"NextJS"
+  },
+  {
+    src:"/logos/nodejs-1.svg",
+    tech:"NodeJS"
+  },
+  {
     src:"/logos/express.svg",
     tech:"ExpressJS"
+  },
+  {
+    src:"/logos/mongodb-icon.svg",
+    tech:"MongoDB"
+  },
+  {
+    src:"/logos/postgresql.svg",
+    tech:"PostgresQL"
+  },
+  {
+    src:"/logos/Laravel.svg",
+    tech:"Laravel"
+  },
+  {
+    src:"/logos/typescript.svg",
+    tech:"Typescript"
+  },
+  {
+    src:"/logos/tailwind-css.svg",
+    tech:"TailwindCSS"
+  },
+  {
+    src:"/logos/socket-io.svg",
+    tech:"Socket.io"
+  },
+  {
+    src:"/logos/gsap.svg",
+    tech:"GreenSock"
+  },
+  {
+    src:"/logos/redux.svg",
+    tech:"Redux"
   }
 ]
 
@@ -37,10 +98,15 @@ const About = () => {
         </p>
       </div>
       <div className={`container-custom container--vertical--spacing `}>
-        <h3 className={`header-1 `}>Techologies I use</h3>
+        <h3 className={`header-1 `}>Techologies I use.</h3>
         <div className={`${style.technologies}`}>
           {technologies.map((tech, i)=><TechCard key={i} tech={tech}  />)}
         </div>
+      </div>
+      <div className={`container-custom container--vertical--spacing`}>
+        <h3 className={`header-1`}>My Resume</h3>
+        <p className={`content ${style.paragraph}`}>Check my resume out to get more information on me.</p>
+        <a rel="noreferrer" className={`btn ${style.resume}`} href="https://docs.google.com/document/d/1ilIhlrhvWkfaWppdEnsPZiLgO6KkGKkEA2d8UNoT4u8/edit?usp=sharing" target="_blank">My Resume</a>
       </div>
     </main>
   )
