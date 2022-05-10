@@ -19,7 +19,7 @@ const ComponentCard = () => {
         <h3 className={`header-2 ${style.title}`}>RDLand</h3>
         <p className={`content-2 ${style.description} bg-inherit lg:bg-slate-500 w-full rounded lg:p-8 max-w lg:max-w-xl dark:lg:bg-slate-900`}>A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.</p>
         <p className={`${style.technologies} text-slate-500 text-lg font-bold`}>
-          {tech.map((t)=><span className={`${style.tech}`}>{t}</span>)}
+          {tech.map((t, i)=><span key={i} className={`${style.tech}`}>{t}</span>)}
         </p>
         <div className={`${style.iconsContainer}`}>
           <a rel="noreferrer" target="_blank" href=""></a>
