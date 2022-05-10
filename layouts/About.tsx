@@ -3,7 +3,7 @@ import styles from "../styles/scss/about.module.scss"
 
 const About = () => {
   return (
-      <section>
+      <section className={styles.aboutSection}>
         <div className={`container-custom container--vertical--spacing ${styles.about}`}>
           <h3 className={`header-1 ${styles.primary_text}`}>
             <span>Hi, I'm </span>

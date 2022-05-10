@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import Link from "next/link"
 import About from "../layouts/About"
 import ProjectCard from "../components/ProjectCard"
 import {TheCacophone, rdLand} from "../utilities/projects"
@@ -12,9 +11,10 @@ const Home: NextPage = () => {
       <About />
       <section className={`container-custom py-12 bg-slate-300 dark:bg-neutral-800`}>
         <h3 className={`header-1`}>Some Projects</h3>
-        <div>
+        <div className={`my-3 flex flex-col items-center`}>
           <ProjectCard project={TheCacophone} />
           <ProjectCard project={rdLand} />
+          <Link  href="/projects"><p className="btn">View More</p></Link>
         </div>
       </section>
       <section className={`container-custom container--vertical--spacing`}>

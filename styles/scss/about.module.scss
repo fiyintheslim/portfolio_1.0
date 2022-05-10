@@ -2,7 +2,11 @@
 .about{
 display: flex;
 flex-direction: column;
-
+}
+.aboutSection{
+    height: 90vh;
+    display: flex;
+    align-items: center;
 }
 .primary_text{
     // color: $primary_text;
