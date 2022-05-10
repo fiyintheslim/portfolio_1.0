@@ -11,7 +11,7 @@ const TechCard = ({tech}: Props) => {
   return (
     <div className={`${style.card} bg-slate-400 dark:bg-slate-300`}>
         <div className={`${style.logo}`}>
-          <Image width={32} height={32} layout="fill" src={tech.src} />
+          <Image alt={`${tech.tech}`} width={32} height={32} layout="fill" src={tech.src} />
         </div>
         <p className={`${style.tech}`}>{tech.tech}</p>
     </div>
