@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import About from "../layouts/About"
 import ProjectCard from "../components/ProjectCard"
+import {TheCacophone, rdLand} from "../utilities/projects"
 
 
 const Home: NextPage = () => {
@@ -12,7 +13,8 @@ const Home: NextPage = () => {
       <section className={`container-custom py-12 bg-slate-300 dark:bg-neutral-800`}>
         <h3 className={`header-1`}>Some Projects</h3>
         <div>
-          <ProjectCard />
+          <ProjectCard project={TheCacophone} />
+          <ProjectCard project={rdLand} />
         </div>
       </section>
       <section className={`container-custom container--vertical--spacing`}>

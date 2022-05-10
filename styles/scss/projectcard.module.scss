@@ -4,6 +4,7 @@
     height: 28rem;
     width: 100%;
     padding: 0 1rem;
+    margin: 2rem 0;
     @media only screen and (min-width: 1024px){
         min-height: 28rem;
         max-width:70rem;
@@ -69,7 +70,7 @@
         
     }
     @media only screen and (min-width: 1024px){
-        width: 33rem;
+        width: 38rem;
         height: 100%;
     }
 }
