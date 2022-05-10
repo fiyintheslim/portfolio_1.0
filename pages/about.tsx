@@ -39,7 +39,7 @@ const About = () => {
       <div className={`container-custom container--vertical--spacing `}>
         <h3 className={`header-1 `}>Techologies I use</h3>
         <div className={`${style.technologies}`}>
-          {technologies.map((tech)=><TechCard tech={tech}  />)}
+          {technologies.map((tech, i)=><TechCard key={i} tech={tech}  />)}
         </div>
       </div>
     </main>
