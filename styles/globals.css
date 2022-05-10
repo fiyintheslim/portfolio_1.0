@@ -64,7 +64,7 @@ main{
 
 @layer components{
   .btn{
-    @apply outline-0 font-bold border-blue-500 text-blue-500 border py-3 px-5 rounded hover:bg-blue-200 hover:text-blue-700;
+    @apply outline-0 font-bold border-blue-500 text-blue-500 text-lg border py-3 px-5 rounded hover:bg-blue-200 hover:text-blue-700;
   }
 }
 

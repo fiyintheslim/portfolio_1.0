@@ -110,6 +110,9 @@
     justify-content: center;
     align-items: flex-end;
     position: relative;
+    @media only screen and (min-width: 1024px){
+        width:55%;
+    }
 }
 
 .link{
