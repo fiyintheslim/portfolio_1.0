@@ -24,7 +24,7 @@ a {
 
 * {
   box-sizing: border-box;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-out;
   font-family: 'Lekton', sans-serif;
   margin: 0;
   padding:0;
@@ -37,6 +37,9 @@ main{
 @layer base{
   .content{
     @apply lg:text-left tracking-wide font-bold text-slate-800 dark:text-slate-400 text-xl lg:text-3xl;
+  }
+  .content-2{
+      @apply lg:text-left tracking-wide font-bold text-slate-200 lg:text-xl;
   }
   .header-1{
     @apply text-5xl lg:text-7xl font-black my-6 text-blue-900 dark:text-blue-600;
@@ -57,7 +60,7 @@ main{
     @apply px-2 md:px-3 lg:px-24 xl:px-40 w-full;
   }
   .container--vertical--spacing{
-    @apply my-12;
+    @apply my-8 lg:my-12;
   }
  
 }
