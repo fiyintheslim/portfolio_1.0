@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
 }
 
 .title{}
@@ -45,6 +46,7 @@
     // z-index: -1;
     overflow: hidden;
     border-radius: 1rem;
+    box-shadow: -1px 2px 4px 2px rgba(0, 0, 0, 0.3);
     &:after{
         content: "";
         background: rgba(25, 21, 61, 0.9);
@@ -55,13 +57,13 @@
         height: 100%;
         @media only screen and (min-width: 1024px){
             background: rgba(38, 34, 85, 0.5);
+
         }
-        
     }
     &:hover img{
         transform: scale(1.1)
     }
-    &:hover &:after{
+    &:hover:after{
         opacity: 0;
     }
     img{
