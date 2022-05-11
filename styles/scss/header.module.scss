@@ -57,7 +57,7 @@
     letter-spacing: 0.1rem;
     font-family: 'Roboto', sans-serif;
     -webkit-text-stroke:2px $primary_component_color;
-    
+    transition: 0.3s ease;
 }
 
 .hamburger__btn{
@@ -101,6 +101,19 @@
     opacity: 0;
     transform: translateX(100vw);
     z-index: 150;
+    &:after{
+        content:"";
+        width:80%;
+        height: 100%;
+        position: absolute;
+        background: red;
+        top:0;
+        right:0;
+        z-index: 151;
+        @media only screen and (min-width: 1024px){
+            width:55%;
+        }
+    }
 }
 
 .menu__content{
@@ -112,6 +125,8 @@
     justify-content: center;
     align-items: flex-end;
     position: relative;
+    z-index: 152;
+    
     @media only screen and (min-width: 1024px){
         width:55%;
     }
@@ -139,7 +154,7 @@
     width: 3rem;
     height: 3rem;
     cursor: pointer;
-
+    transition: 0.3s ease;
     @media only screen and (min-width: 1024px){
         width: 5rem;
         height: 5rem;

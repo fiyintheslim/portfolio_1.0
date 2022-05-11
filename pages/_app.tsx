@@ -1,14 +1,12 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from "next/head"
-import Script from "next/script"
 import {useEffect, useState, useRef} from "react"
 import Header from "../layouts/Header"
 import Footer from "../layouts/Footer"
-import style from "../styles/scss/header.module.scss"
 import Preloader from "../layouts/Preloader"
 import loadConfig from 'next/dist/server/config'
-import gsap from "gsap"
+import {handlePreloaderHide} from "../utilities/animations"
 
 
 
@@ -17,16 +15,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(true)
 
   const preloader = useRef<HTMLDivElement>(null)
-  const tl = gsap.timeline()
-
-  const handleLoad = ()=>{
-    console.log("finished loading")
-      tl.to(preloader.current, {opacity:0, duration: 3, borderRadius:"100%", ease:'power4.out'})
-      .to(preloader.current, {duration:1, display:'none'})
-  }
+  
 
   useEffect(()=>{
-    console.log("window", window)
+    
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark')
       setIsDarkTheme(true)
@@ -37,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     setLoading(false)
     
     setTimeout(()=>{
-      handleLoad()
+      handlePreloaderHide(preloader.current!)
     }, 2000)
   
   }, [])

@@ -10,11 +10,7 @@ const Preloader = () => {
     const logo = useRef<HTMLParagraphElement>(null)
 
     const tl = gsap.timeline();
-    const unmount = (bounce: gsap.core.Tween, tl: gsap.core.Timeline)=>{
-      bounce.kill()
-      gsap.fromTo(center.current, {y:0, height:90}, {y:-1800, height:100, duration:1,  paused:false, ease:'power1'})
-      // tl.reverse();
-    }
+   
     useEffect(()=>{
       let bounce: gsap.core.Tween;
         if(center.current && loading.current && logo.current){
@@ -23,12 +19,8 @@ const Preloader = () => {
 
             tl.to(logo.current, {y:60, opacity:1, duration:0.6, ease:"power4.out"})
             .to(logo.current.children[1], {rotation:90, duration:1, x:-20, y:45, ease:"elastic.out"}, "+=0.1")
-            .to(logo.current.children[1], {rotation:0, duration:0.5, x:0, y:0, ease:"power4.out"})
-
-            
+            .to(logo.current.children[1], {rotation:0, duration:0.5, x:0, y:0, ease:"power4.out"}) 
         }
-
-        return ()=>unmount(bounce, tl)
     }, [])
   return (
     <div className={`${style.preloader} bg-slate-300 dark:bg-neutral-800`}>
