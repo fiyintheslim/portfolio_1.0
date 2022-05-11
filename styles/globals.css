@@ -24,7 +24,7 @@ a {
 
 * {
   box-sizing: border-box;
-  transition: 0.3s ease-out;
+  
   font-family: 'Lekton', sans-serif;
   margin: 0;
   padding:0;
@@ -36,7 +36,7 @@ main{
 
 @layer base{
   .content{
-    @apply lg:text-left tracking-wide font-bold text-slate-800 dark:text-slate-400 text-xl lg:text-3xl;
+    @apply lg:text-left tracking-wide font-bold text-slate-800 dark:text-slate-400 text-lg lg:text-xl;
   }
   .content-2{
       @apply lg:text-left tracking-wide font-bold text-slate-200 lg:text-xl;

@@ -1,15 +1,22 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from "next/head"
-import {useEffect, useState} from "react"
+import {useEffect, useState, useRef} from "react"
 import Header from "../layouts/Header"
 import Footer from "../layouts/Footer"
 import style from "../styles/scss/header.module.scss"
+import Preloader from "../layouts/Preloader"
+import loadConfig from 'next/dist/server/config'
+import gsap from "gsap"
 
 
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
+  const [loading, setLoading] = useState(true)
+
+  const preloader = useRef<HTMLDivElement>(null)
+  const tl = gsap.timeline()
 
   useEffect(()=>{
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -18,6 +25,14 @@ function MyApp({ Component, pageProps }: AppProps) {
     } else {
       document.documentElement.classList.remove('dark')
       setIsDarkTheme(false)
+    }
+    setLoading(false)
+    window.onload = ()=>{
+      if(preloader.current){
+        tl.to(preloader.current, {opacity:0, delay:2, duration: 1, borderRadius:"100%", ease:'power4.out'})
+        .to(preloader.current, {duration:1, display:'none'})
+      }
+      
     }
   }, [])
   const handleTheme = ()=>{
@@ -38,6 +53,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <link rel="icon" href="favicon.png" />
       <title>Oyekunle Fiyinfoluwa | Software developer</title>
     </Head>
+    
     <Header />
     <Component {...pageProps} />
     <Footer />
@@ -46,6 +62,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <span aria-label="Light mode" role="img">🌞</span> :
         <span aria-label="Dark mode" role="img">🌜</span>}
     </button>
+    <div ref={preloader}>
+      <Preloader />
+    </div>
+    
   </>
   )
 }
