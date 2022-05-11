@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from "next/head"
+import Script from "next/script"
 import {useEffect, useState, useRef} from "react"
 import Header from "../layouts/Header"
 import Footer from "../layouts/Footer"
@@ -35,10 +36,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
     setLoading(false)
     window.addEventListener("load", handleLoad)
-    document.addEventListener("deviceready", handleLoad)
+    
     return ()=>{
-      //window.removeEventListener('load', handleLoad)
-      // document.removeEventListener('deviceready', handleLoad)
+      window.removeEventListener('load', handleLoad)
+      
     }
   }, [])
   const handleTheme = ()=>{
@@ -59,7 +60,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <link rel="icon" href="favicon.png" />
       <title>Oyekunle Fiyinfoluwa | Software developer</title>
     </Head>
-    <div ref={preloader}>
+    <div id="preloader-container" ref={preloader}>
       <Preloader />
     </div>
     <Header />
@@ -70,7 +71,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <span aria-label="Light mode" role="img">🌞</span> :
         <span aria-label="Dark mode" role="img">🌜</span>}
     </button>
-    
+    <Script 
+    onLoad={()=>handleLoad()}
+    ></Script>
     
   </>
   )
