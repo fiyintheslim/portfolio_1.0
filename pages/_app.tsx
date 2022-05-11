@@ -18,6 +18,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   const preloader = useRef<HTMLDivElement>(null)
   const tl = gsap.timeline()
 
+  const handleLoad = ()=>{
+      tl.to(preloader.current, {opacity:0, delay:2, duration: 1, borderRadius:"100%", ease:'power4.out'})
+      .to(preloader.current, {duration:1, display:'none'})
+  }
+
   useEffect(()=>{
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark')
@@ -27,12 +32,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       setIsDarkTheme(false)
     }
     setLoading(false)
-    window.onload = ()=>{
-      
-      tl.to(preloader.current, {opacity:0, delay:2, duration: 1, borderRadius:"100%", ease:'power4.out'})
-      .to(preloader.current, {duration:1, display:'none'})
-    
-    }
+    window.onload = handleLoad
+    return ()=>window.removeEventListener('load', handleLoad)
   }, [])
   const handleTheme = ()=>{
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
