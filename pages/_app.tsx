@@ -25,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   useEffect(()=>{
+    console.log("window", window)
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark')
       setIsDarkTheme(true)
