@@ -28,11 +28,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
     setLoading(false)
     window.onload = ()=>{
-      if(preloader.current){
-        tl.to(preloader.current, {opacity:0, delay:2, duration: 1, borderRadius:"100%", ease:'power4.out'})
-        .to(preloader.current, {duration:1, display:'none'})
-      }
       
+      tl.to(preloader.current, {opacity:0, delay:2, duration: 1, borderRadius:"100%", ease:'power4.out'})
+      .to(preloader.current, {duration:1, display:'none'})
+    
     }
   }, [])
   const handleTheme = ()=>{
