@@ -12,7 +12,7 @@ const Preloader = () => {
     const tl = gsap.timeline();
     const unmount = (bounce: gsap.core.Tween, tl: gsap.core.Timeline)=>{
       bounce.kill()
-      gsap.fromTo(center.current, {y:0, height:90}, {y:-1800, height:100, background:"linear-gradient(45deg, rgb(0, 0, 0), rgba(69, 76, 168, #ffffff6e55, 255))", duration:1,  paused:false, ease:'power1'})
+      gsap.fromTo(center.current, {y:0, height:90}, {y:-1800, height:100, duration:1,  paused:false, ease:'power1'})
       // tl.reverse();
     }
     useEffect(()=>{

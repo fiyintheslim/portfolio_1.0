@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const tl = gsap.timeline()
 
   const handleLoad = ()=>{
+    console.log("finished loading")
       tl.to(preloader.current, {opacity:0, delay:2, duration: 1, borderRadius:"100%", ease:'power4.out'})
       .to(preloader.current, {duration:1, display:'none'})
   }
@@ -32,7 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       setIsDarkTheme(false)
     }
     setLoading(false)
-    window.onload = handleLoad
+    window.addEventListener("load", handleLoad)
     return ()=>window.removeEventListener('load', handleLoad)
   }, [])
   const handleTheme = ()=>{

@@ -24,7 +24,7 @@ a {
 
 * {
   box-sizing: border-box;
-  transition: background 0.3s ease, color 0.3s, transform 0.5s;
+  transition: background 0.3s ease, color 0.3s;
   font-family: 'Lekton', sans-serif;
   margin: 0;
   padding:0;
