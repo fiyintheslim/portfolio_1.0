@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     window.addEventListener("load", handleLoad)
     document.addEventListener("deviceready", handleLoad)
     return ()=>{
-      window.removeEventListener('load', handleLoad)
+      //window.removeEventListener('load', handleLoad)
       // document.removeEventListener('deviceready', handleLoad)
     }
   }, [])
