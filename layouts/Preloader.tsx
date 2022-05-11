@@ -22,7 +22,7 @@ const Preloader = () => {
             gsap.fromTo(loading.current.children, { opacity:0}, {opacity:1, duration:1, stagger:1, repeat:-1, delay:0.5})
 
             tl.to(logo.current, {y:40, opacity:1, duration:0.6, ease:"power4.out"})
-            .to(logo.current.children[1], {rotation:90, duration:1, x:-20, y:45, ease:"elastic.out"}, "+=-0.1")
+            .to(logo.current.children[1], {rotation:90, duration:1, x:-20, y:45, ease:"elastic.out"}, "+=0.1")
             .to(logo.current.children[1], {rotation:0, duration:0.5, x:0, y:0, ease:"power4.out"})
 
             

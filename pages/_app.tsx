@@ -34,7 +34,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
     setLoading(false)
     window.addEventListener("load", handleLoad)
-    return ()=>window.removeEventListener('load', handleLoad)
+    document.addEventListener("deviceready", handleLoad)
+    return ()=>{
+      window.removeEventListener('load', handleLoad)
+      // document.removeEventListener('deviceready', handleLoad)
+    }
   }, [])
   const handleTheme = ()=>{
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -54,7 +58,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <link rel="icon" href="favicon.png" />
       <title>Oyekunle Fiyinfoluwa | Software developer</title>
     </Head>
-    
+    <div ref={preloader}>
+      <Preloader />
+    </div>
     <Header />
     <Component {...pageProps} />
     <Footer />
@@ -63,9 +69,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <span aria-label="Light mode" role="img">🌞</span> :
         <span aria-label="Dark mode" role="img">🌜</span>}
     </button>
-    <div ref={preloader}>
-      <Preloader />
-    </div>
+    
     
   </>
   )
