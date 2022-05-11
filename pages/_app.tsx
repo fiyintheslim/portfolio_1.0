@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const handleLoad = ()=>{
     console.log("finished loading")
-      tl.to(preloader.current, {opacity:0, delay:2, duration: 1, borderRadius:"100%", ease:'power4.out'})
+      tl.to(preloader.current, {opacity:0, duration: 3, borderRadius:"100%", ease:'power4.out'})
       .to(preloader.current, {duration:1, display:'none'})
   }
 
@@ -35,12 +35,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       setIsDarkTheme(false)
     }
     setLoading(false)
-    window.addEventListener("load", handleLoad)
     
-    return ()=>{
-      window.removeEventListener('load', handleLoad)
-      
-    }
+    setTimeout(()=>{
+      handleLoad()
+    }, 2000)
+  
   }, [])
   const handleTheme = ()=>{
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -71,9 +70,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <span aria-label="Light mode" role="img">🌞</span> :
         <span aria-label="Dark mode" role="img">🌜</span>}
     </button>
-    <Script 
-    onLoad={()=>handleLoad()}
-    ></Script>
     
   </>
   )
