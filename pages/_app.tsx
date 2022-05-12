@@ -7,6 +7,7 @@ import Footer from "../layouts/Footer"
 import Preloader from "../layouts/Preloader"
 import loadConfig from 'next/dist/server/config'
 import {handlePreloaderHide} from "../utilities/animations"
+import style from "../styles/scss/preloader.module.scss"
 
 
 
@@ -51,7 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <link rel="icon" href="favicon.png" />
       <title>Oyekunle Fiyinfoluwa | Software developer</title>
     </Head>
-    <div id="preloader-container" ref={preloader}>
+    <div className={style.preloaderContainer}id="preloader-container" ref={preloader}>
       <Preloader />
     </div>
     <Header />

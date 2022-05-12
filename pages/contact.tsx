@@ -6,7 +6,7 @@ const Contact = () => {
     <main className={`${style.main}`}>
         <div className={`container-custom ${style.container}`}>
             <h3 className={`header-1`}>Get In Touch</h3>
-            <p className={`content`}>My inbox is always open for collaborations and new opportunities. Leave me a message, I will try my best to respond A$AP.</p>
+            <p className={`content`}>My inbox is always open for collaborations and new opportunities. Leave me a message, I try to respond A$AP.</p>
             <div className={`${style.socials__container}`}>
                 <a className={`btn ${style.email__btn}`} href="mailto:fiyinoyekunle@gmail.com" rel="noreferrer" target="_blank">Send an Email</a>
                 <div className={`${style.socials}`}>
