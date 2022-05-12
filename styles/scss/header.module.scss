@@ -62,7 +62,7 @@
 }
 .hamburger__text{
     &:hover{
-        transform:scale(1.5) rotate(-2deg) translateX(-5rem);
+        transform:scale(1.5) rotate(-2deg) translateX(-3rem);
         color: $primary_component_color;
     }
 }
