@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps, router}: AppProps) {
   <>
     <Head>
       <link rel="icon" href="favicon.png" />
-      <title>Oyekunle Fiyinfoluwa | Software developer</title>
+      <title>Fiyinfoluwa Oyekunle | Software developer</title>
     </Head>
     <div className={style.preloaderContainer}id="preloader-container" ref={preloader}>
       <Preloader />
