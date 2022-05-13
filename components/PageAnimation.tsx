@@ -29,7 +29,7 @@ const PageAnimation = ({children}:Props) => {
             animate="animate"
             exit="exit"
             transition={{
-                duration:1, 
+                duration:0.5, 
                 ease:"easeInOut", 
                 when:"beforeChildren"
                 
@@ -55,7 +55,7 @@ const PageAnimation = ({children}:Props) => {
             animate={{scaleX:0}}
             exit={{scaleX:0}}
             transition={{
-                duration: 0.8, 
+                duration: 0.3, 
                 ease:"easeInOut",
                 when:"afterChildren"
              }}
@@ -66,7 +66,7 @@ const PageAnimation = ({children}:Props) => {
                     className={style.logo}
                     initial={{y:0}}
                     animate={{y:400}}
-                    transition={{duration:0.5, ease:"easeInOut",}}
+                    transition={{duration:0.2, ease:"easeInOut",}}
                 >
                     <Image layout="fill" src="/logo.png" />
                 </motion.div>

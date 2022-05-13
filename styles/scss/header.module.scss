@@ -34,6 +34,10 @@
     justify-content: space-between;
     
     overflow:hidden;
+    p{
+        top: 30px;
+        -webkit-text-stroke:2px $primary_component_color;
+    }
     &:hover p{
         top:0;
     }
@@ -43,9 +47,12 @@
 }
 .hamburger__menu{
     display: none;
+    transition: 0.3s ease-out;
+    
     @media only screen and (min-width:768px){
         display:block;
     }
+    
 }
 
 .hamburger__text, .hamburger__menu{
@@ -56,13 +63,13 @@
     font-size: 2rem;
     letter-spacing: 0.1rem;
     font-family: 'Roboto', sans-serif;
-    -webkit-text-stroke:2px $primary_component_color;
-    transition: 0.3s ease-out;
+    opacity: 0;
+    // -webkit-text-stroke:2px $primary_component_color;
+    // transition: 0.3s ease-out;
    
 }
 .hamburger__text{
     &:hover{
-        transform:scale(1.5) rotate(-2deg) translateX(-3rem);
         color: $primary_component_color;
     }
 }
@@ -117,24 +124,31 @@
     height: 100%;
     width: 80%;
     box-shadow: -2px 0px 10px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
     position: relative;
     z-index: 152;
-    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     @media only screen and (min-width: 1024px){
         width:55%;
     }
     
 }
 
+.menuLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
 .link{
-    margin-right: 3rem;
+    margin-right: 1rem;
     cursor: pointer;
     @media only screen and (min-width:1024px){
         font-size: 4rem;
+        margin-right: 3rem;
     }
     
 }

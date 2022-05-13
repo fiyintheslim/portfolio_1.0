@@ -37,7 +37,7 @@ export const bibli = {
     desc:"A CRUD app for users to upload books ebooks, read and leave reviews. It contains: paginations and search functionality.",
     tech:["react", "redux", "react-router-dom", "Bootstrap", "JWT", "express", "mongodb"],
     links:{
-        github:"",
+        github:"https://github.com/fiyintheslim/library-app",
         live:"http://bibli2.herokuapp.com"
     }
 }
