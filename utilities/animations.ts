@@ -19,8 +19,8 @@ export const handleHideMenu = (el: HTMLDivElement) => {
     const tl = gsap.timeline();
     let divs = el.querySelectorAll("div")
     tl.to(divs[0], {transform:"translateY(-120vh)", duration:0.3})
-    .to(divs[1], {transform:"translateY(-120vh)", duration:0.4}, "-=0.1")
-    .to(el, {transform:"translateX(120vw)", opacity:1, duration:0.5}, "-=0.")
+    .to(divs[1], {transform:"translateY(-120vh)", duration:0.3}, "-=0.1")
+    .to(el, {transform:"translateX(120vw)", opacity:1, duration:0.3}, "-=0.1")
 }
 
 export const handleBurgerEnter =(el:HTMLDivElement) => {

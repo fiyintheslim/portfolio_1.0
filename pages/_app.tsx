@@ -8,10 +8,12 @@ import Preloader from "../layouts/Preloader"
 import loadConfig from 'next/dist/server/config'
 import {handlePreloaderHide} from "../utilities/animations"
 import style from "../styles/scss/preloader.module.scss"
+import {AnimatePresence} from "framer-motion"
+import { Router } from 'next/router'
 
 
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router}: AppProps) {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
   const [loading, setLoading] = useState(true)
 
@@ -56,7 +58,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Preloader />
     </div>
     <Header />
-    <Component {...pageProps} />
+    <AnimatePresence exitBeforeEnter>
+      <Component {...pageProps} key={router.route} />
+    </AnimatePresence>
     <Footer />
     <button className="fixed right-2 bottom-2 w-12 h-12 rounded-full shadow bg-slate-900 outline-none dark:bg-slate-100" onClick={()=>handleTheme()}>
     {isDarkTheme ?

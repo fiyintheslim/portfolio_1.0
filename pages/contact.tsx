@@ -1,8 +1,10 @@
 import React from 'react'
 import style from "../styles/scss/contact.module.scss"
+import PageAnimation from "../components/PageAnimation"
 
 const Contact = () => {
   return (
+    <PageAnimation>
     <main className={`${style.main}`}>
         <div className={`container-custom ${style.container}`}>
             <h3 className={`header-1`}>Get In Touch</h3>
@@ -19,6 +21,7 @@ const Contact = () => {
         </div>
         
     </main>
+    </PageAnimation>
   )
 }
 

@@ -2,10 +2,12 @@ import React from 'react'
 import ProjectCard from "../components/ProjectCard"
 import {rdLand, TheCacophone, bibli, easyAtRents} from "../utilities/projects"
 import style from "../styles/scss/projects.module.scss"
+import PageAnimation from "../components/PageAnimation"
 
 const projects = [rdLand, TheCacophone, bibli, easyAtRents]
 const Projects = () => {
   return (
+    <PageAnimation>
     <main>
       <div className={`container-custom container--vertical--spacing`}>
         <h3 className={`header-1`}>My Projects</h3>
@@ -16,6 +18,7 @@ const Projects = () => {
         
       </div>
     </main>
+    </PageAnimation>
   )
 }
 
