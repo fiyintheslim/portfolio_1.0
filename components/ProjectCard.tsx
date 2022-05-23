@@ -22,7 +22,7 @@ const ComponentCard = ({project} : Props) => {
     <div className={`${style.projectContainer}`}>
       <div className={`${style.info}`}>
         <h3 className={`header-2 ${style.title}`}>{name}</h3>
-        <p className={`content-2 ${style.description} bg-inherit text-neutral-900 lg:bg-neutral-100 w-full rounded lg:p-8 max-w lg:max-w-xl dark:text-neutral-100 dark:lg:bg-neutral-900`}>{desc}</p>
+        <p className={`content-2 ${style.description} bg-inherit text-slate-50 lg:text-neutral-900 lg:bg-neutral-100 w-full rounded lg:p-8 max-w lg:max-w-xl dark:text-neutral-100 dark:lg:bg-neutral-900`}>{desc}</p>
         <p className={`${style.technologies}  text-blue-600 dark:text-blue-600 text-lg font-bold`}>
           {tech.map((t, i) => <span key={i} className={`drop-shadow-2xl ${style.tech}`}>{t}</span>)}
         </p>
