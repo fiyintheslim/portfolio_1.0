@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     <PageAnimation>
       <main className="">
         <About />
-        <section className={`container-custom py-12 bg-slate-300 dark:bg-neutral-800`}>
+        <section className={`container-custom py-12 bg-slate-200 dark:bg-neutral-800`}>
           <h3 className={`header-1`}>Some Projects</h3>
           <div className={`my-3 flex flex-col items-center`}>
             <ProjectCard project={TheCacophone} />

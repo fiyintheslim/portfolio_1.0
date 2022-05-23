@@ -48,7 +48,7 @@ main{
     @apply tracking-wide text-3xl lg:text-5xl font-extrabold my-3 text-blue-600 dark:text-blue-400;
   }
   body{
-    @apply min-h-screen bg-slate-200 dark:bg-neutral-900;
+    @apply min-h-screen bg-slate-100 dark:bg-neutral-900;
   }
 }
 
