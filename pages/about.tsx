@@ -83,9 +83,7 @@ const About = () => {
           <h3 className={`header-1 `}>About me</h3>
           <p className={`content ${style.paragraph}`}>
             Hi, I&apos;m Fiyinfoluwa Oyekunle, a web developer with my focus currently in the frontend.
-            I enjoy creating software that works and debugging (The dopamine rush after squashing the bug is amazing). I cannot put a date to when I first picked interest in computers
-            but I took my first step, after previous first steps, to becoming a developer in 2020 when I read Head First HTML and CSS during the covid-19 lockdown,
-              fastforward to today and I still am mind blown by the possibilities that can be created through computers.
+            I enjoy creating performant software that makes for better user experience. 
           </p>
           <p className={`content ${style.paragraph}`}>
             I started off on Fiverr where I built a few websites for people using wix.
