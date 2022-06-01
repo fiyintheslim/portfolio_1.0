@@ -13,7 +13,7 @@ const About = () => {
             I build sofware for the web.
           </h4>
           <p className={`content`}>
-          I create performant web applications that provide amazing user experiences.
+          I create performant web applications that provide amazing user experiences using Javascript and Typescript.
           I use React as my primary frontend library for making web apps as weel as other technologies like: jquery, tailwindCSS, nextJS, postgresQL, redux.
           I am currently concentrating on accessibility, performance, and the creation of immersive aesthetic experiences through design and animations. 
           </p>
