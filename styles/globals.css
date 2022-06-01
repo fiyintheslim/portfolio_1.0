@@ -36,7 +36,7 @@ main{
 
 @layer base{
   .content{
-    @apply lg:text-left tracking-wide font-bold text-slate-800 dark:text-slate-400 text-lg lg:text-xl;
+    @apply lg:text-left mb-3 tracking-wide font-bold text-slate-800 dark:text-slate-400 text-lg lg:text-xl;
   }
   .content-2{
       @apply lg:text-left tracking-wide font-bold text-slate-200 lg:text-xl;
