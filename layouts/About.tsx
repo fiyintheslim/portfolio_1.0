@@ -13,7 +13,8 @@ const About = () => {
             I build sofware for the web.
           </h4>
           <p className={`content`}>
-          I have over 3 years of experience as a software engineer. I create performant web applications that provide amazing user experiences.
+          I create performant web applications that provide amazing user experiences.
+          I use React as my primary frontend library for making web apps as weel as other technologies like: jquery, tailwindCSS, nextJS, postgresQL, redux.
           I am currently concentrating on accessibility, performance, and the creation of immersive aesthetic experiences through design and animations. 
           </p>
         </div>
