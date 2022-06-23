@@ -52,3 +52,14 @@ export const easyAtRents = {
         live:"http://easyatrents.herokuapp.com"
     }
 }
+
+export const theTodo = {
+    name:"theTODO",
+    src:"/projects/theTODO.png",
+    desc:"A simple TODO application with PWA capabilities like offline availability and data persistence using indexedDB.",
+    tech:["React", "Parcel", "indexedDB", "service workers", "typescript"],
+    links:{
+        github:"https://github.com/fiyintheslim/todo-pwa",
+        live:"https://www.thetodo.netlify.app"
+    }
+}

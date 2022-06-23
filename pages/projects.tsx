@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectCard from "../components/ProjectCard"
-import {rdLand, TheCacophone, bibli, easyAtRents} from "../utilities/projects"
+import {rdLand, TheCacophone, bibli, easyAtRents, theTodo} from "../utilities/projects"
 import style from "../styles/scss/projects.module.scss"
 import PageAnimation from "../components/PageAnimation"
 
