@@ -89,6 +89,10 @@
     display: flex;
     width: 5rem;
     justify-content: space-evenly;
+
+    @media only screen and (max-width: 768px){
+        stroke: #cbd5e1;
+    }
 }
 
 .icon{

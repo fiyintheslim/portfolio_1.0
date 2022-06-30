@@ -4,7 +4,7 @@ import {rdLand, TheCacophone, bibli, easyAtRents, theTodo} from "../utilities/pr
 import style from "../styles/scss/projects.module.scss"
 import PageAnimation from "../components/PageAnimation"
 
-const projects = [rdLand, TheCacophone, bibli, easyAtRents]
+const projects = [rdLand, TheCacophone, bibli, easyAtRents, theTodo]
 const Projects = () => {
   return (
     <PageAnimation>
