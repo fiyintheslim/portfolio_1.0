@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps, router}: AppProps) {
       <Component {...pageProps} key={router.route} />
     </AnimatePresence>
     <Footer />
-    <button className="fixed right-2 bottom-2 w-12 h-12 rounded-full shadow bg-slate-900 outline-none dark:bg-slate-100" onClick={()=>handleTheme()}>
+    <button className="z-50 fixed right-2 bottom-2 w-12 h-12 rounded-full shadow bg-slate-900 outline-none dark:bg-slate-100" onClick={()=>handleTheme()}>
     {isDarkTheme ?
         <span aria-label="Light mode" role="img">🌞</span> :
         <span aria-label="Dark mode" role="img">🌜</span>}
