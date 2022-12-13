@@ -60,6 +60,6 @@ export const theTodo = {
     tech:["React", "Parcel", "indexedDB", "service workers", "typescript"],
     links:{
         github:"https://github.com/fiyintheslim/todo-pwa",
-        live:"https://www.thetodo.netlify.app"
+        live:"https://thetodo.netlify.app"
     }
 }
